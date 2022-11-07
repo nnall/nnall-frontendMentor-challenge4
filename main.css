@@ -1,0 +1,236 @@
+:root{
+
+    --veryLightGrey:hsl(0, 0%, 95%);
+    --transparentWhite:hsla(0, 0%, 100%, 0.75);
+
+    --brightOrange:hsl(31, 77%, 52%);
+    --darkCyan:hsl(184, 100%, 22%);
+    --veryDarkCyan:hsl(179, 100%, 13%);
+}
+
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    background-color: var(--veryLightGrey);
+    min-height:100vh;
+    font-family: 'Lexend Deca', sans-serif;
+    
+
+}
+
+footer{
+    position:fixed;
+    bottom:1.5rem;
+    color:black;
+
+
+}
+footer a:link,
+footer a:visited{
+    text-decoration:none;
+    color:black;
+
+    
+}
+
+footer a:hover{
+    color: var(--brightOrange);
+}
+
+
+main{
+    display: flex;
+    overflow: hidden;
+}
+
+.card{
+    display: flex;
+    min-height:37rem;
+    max-width:16rem;
+    flex-direction:column;
+    justify-content: space-between;
+    padding:5rem 7rem 4.5rem 5rem;
+}
+
+
+.card1{
+    background-color: var(--brightOrange);
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+
+}
+.card2{
+    background-color:var(--darkCyan);
+}
+.card3{
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    background-color:var(--veryDarkCyan);
+}
+
+.icon{
+    transform:scale(1.4);
+}
+
+h2{
+    font-family: 'Big Shoulders Display', cursive;
+    color:var(--veryLightGrey);
+    text-transform: uppercase;
+    font-size:3.75rem;
+    transform:translatey(-1rem);
+}
+
+figcaption{
+    color: var(--transparentWhite);
+    transform:translatey(-2.5rem);
+    opacity:.7;
+    max-width:17rem;
+    font-size:1.3rem; 
+    line-height:1.9;
+}
+
+
+.card1 figcaption{
+    min-width:17rem;
+}
+.card2 figcaption{
+    min-width:18rem;
+}
+.card3 figcaption{
+    min-width:19rem;
+}
+
+.learnMore{
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--transparentWhite);
+    padding:1.5rem 0rem 1.5rem 3rem;
+    font-size:1.3rem;
+    border:none;
+    max-width:10rem;
+    /* min-height:3rem; */
+    border-radius:50px;
+
+}
+
+.learnMore:hover{
+    background-color: var(--veryLightGrey);
+    cursor:pointer;
+
+}
+
+.one{
+    color: var(--brightOrange);
+}
+.two{
+    color:var(--darkCyan);
+}
+.three{
+    color:var(--veryDarkCyan);
+}
+
+
+@media screen and (max-width:1500px){
+    .card{
+        padding:5rem 6rem 4.5rem 4.5rem;
+    }
+}
+
+@media screen and (max-width:1400px){
+
+    body{
+        padding-top:5rem;
+        padding-bottom:5rem;
+    }
+
+    .attribution{
+        bottom:.5rem;
+    } 
+
+    .card{
+        min-height:29rem;
+        max-width:18rem;
+        padding:4.5rem 6rem 4rem 4rem;
+    }
+
+    .icon{
+        transform:scale(1.1);
+    }
+
+    main{
+        flex-direction:column;
+    }
+
+    .card1{
+        border-bottom-left-radius:0;
+        border-top-right-radius:15px;
+    }
+
+    .card1 figcaption{
+        min-width:19rem;
+    }
+
+    .card3{
+        border-top-right-radius:0;
+        border-bottom-left-radius:15px;
+        border-bottom-right-radius:15px;
+    }
+
+    .card2 figcaption{
+        min-width:20rem;
+    }
+
+    .card3 figcaption{
+        min-width:18.5rem;
+    }
+
+    h2{
+        transform:translatey(.5rem);
+        font-size:3.2rem;
+    }
+
+    figcaption{
+        transform:translatey(.1rem);
+        font-size:1.25rem;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .card{
+        padding:3.5rem 4.5rem 3rem 2.5rem;
+        max-width:16rem;
+    }
+
+    figcaption{
+        line-height: 2rem;
+        transform:translatey(-1rem);
+    }
+
+    h2{
+        transform:translatey(-1rem)
+    }
+
+    .learnMore{
+        padding:.4rem 1.5rem .4rem 1.5rem;
+    }
+
+}
+
+
+
+
